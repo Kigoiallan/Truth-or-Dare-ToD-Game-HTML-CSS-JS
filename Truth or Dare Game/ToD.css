@@ -1,0 +1,131 @@
+body{
+	align-items: center;
+	align-content: center;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	background-repeat: no-repeat;
+	background-image: url(Kushiro.png);
+	background-size: cover;
+	background-position: center;
+	padding: 20px;
+	width: 100%;
+	height: 100vh;
+}
+#image-tod {
+	width: 50%;
+	opacity: 1.8;
+}
+#container{
+	width: 450px;
+	height: 600px;
+	background: linear-gradient(hotpink, greenyellow);
+	border: 3px solid white;
+	border-radius: 10px;
+	display: inline-block;
+	margin: 30px;
+	text-align: center;
+	align-items: center;
+}
+
+#heading{
+	color: darkred;
+	text-align: centre;
+	font-size: 20px;
+	font-weight: 900;
+	font-style: none;
+
+
+}
+
+#intro p{
+	text-align: left;
+	color: black;
+	font-size: 20px;
+	margin-left: 19px;
+	margin-top: 50px;
+}
+
+#question p{
+	color: black;
+	font-size: 55px;
+	margin: 50px;
+	margin-bottom: 90px;
+	text-align: center;
+	
+}
+
+#myButton{
+	background-color:transparent;
+	display: flex;
+	justify-content: space-evenly;
+	width: 350px;
+	height: 50px;
+	align-items: center;
+	margin-left: 50px;
+
+}
+
+#myTruth {
+	background-color: darkblue;
+	color: white;
+	width: 70px;
+	height: 40px;
+	border-radius: 7px;
+	text-align: center;
+}
+
+#myTruth:hover{
+	background-color: orange;
+	color: black;
+	font-weight: 1000;
+	cursor: pointer;
+
+
+}
+
+#myDare {
+	background-color: red;
+	color: white;
+	width: 70px;
+	height: 40px;
+	border-radius: 7px;
+	text-align: center;
+}
+
+#myDare:hover{
+	background-color: orange;
+	color: black;
+	font-weight: 1000;
+	cursor: pointer;
+
+}
+
+#Q{
+	width: 400px;
+	height: 100px;
+	background-color: transparent;
+	margin: 20px;
+	margin-top: 30px;
+	border-radius: 15px;
+
+}
+
+#footer{
+	text-align: left;
+	margin-top: 70px;
+	margin-bottom: 0px;
+	font-weight: 1000;
+
+}
+
+#myLabel{
+	color: black;
+	background-color: none;
+	width: 100%;
+	height: 20px;
+	font-weight: 1000;
+	margin-left: 20px;
+	margin-top: 80px;
+	font-size: 35px;
+}
