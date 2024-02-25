@@ -181,23 +181,55 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
 
 
+    function shuffle(array) {
+        let currentIndex = array.length;
+        let temporaryValue, randomIndex;
+
+        while (currentIndex !== 0) {
+            randomIndex = Math.floor(Math.random() * currentIndex);
+            currentIndex -= 1;
+
+            temporaryValue = array[currentIndex];
+            array[currentIndex] = array[randomIndex];
+            array[randomIndex] = temporaryValue;
+        }
+
+        return array;
+    }
+
+    // Shuffle truth questions array
+    const shuffledTruthQuestions = shuffle(truthQuestions);
+
+    // Shuffle dare tasks array
+    const shuffledDareTasks = shuffle(dareTasks);
+
     const questionDisplay = document.getElementById("myLabel");
     const truthButton = document.getElementById("myTruth");
     const dareButton = document.getElementById("myDare");
 
+    let truthIndex = 0;
+    let dareIndex = 0;
 
     truthButton.addEventListener("click", () => {
-        const randomQuestion = Math.floor(Math.random() * truthQuestions.length);
-        const randomItem = truthQuestions[randomQuestion];
-        questionDisplay.textContent = randomItem;
-
+        if (truthIndex >= shuffledTruthQuestions.length) {
+            // All truth questions have been displayed
+            questionDisplay.textContent = "No more truth questions!";
+        } else {
+            const randomItem = shuffledTruthQuestions[truthIndex];
+            questionDisplay.textContent = randomItem;
+            truthIndex++;
+        }
     });
 
     dareButton.addEventListener("click", () => {
-        const randomDare = Math.floor(Math.random() * dareTasks.length);
-        const randomItem = dareTasks[randomDare];
-        questionDisplay.textContent = randomItem;
-
+        if (dareIndex >= shuffledDareTasks.length) {
+            // All dare tasks have been displayed
+            questionDisplay.textContent = "No more dare tasks!";
+        } else {
+            const randomItem = shuffledDareTasks[dareIndex];
+            questionDisplay.textContent = randomItem;
+            dareIndex++;
+        }
     });
 
 });
